@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="recorder.css"/>
+		<link rel="stylesheet" href="recorder-out.css"/>
+	</head>
+
+	<body>
+		<main>
+			<nav class="flex gap-2 px-2 py-1">
+				<input type="text" class="w-full" name="macro-title" id="macro-title"/>
+				<ul class="flex gap-1 justify-end">
+					<!--<li><button title="Play" id="play">&#x25B6</button></li>-->
+					<!--<li><button title="Pause" id="pause">&#x23F8</button></li>-->
+					<li><button title="Save" class="hidden" id="save">🖫</button></li>
+					<li><button title="Discard" class="hidden" id="discard">🗑</button></li>
+					<li><button title="Stop" class="hidden" id="stop">&#x23F9</button></li>
+					<li><button title="Record" id="record">&#x23FA</button></li>
+					<li><button title="List Macros" id="list">&#9776</button></li>
+				</ul>
+			</nav>
+			<div id="sidebar-content" class="p-2">
+				<div id="step-list">
+					<p id="helpful">Press &#x23FA to start recording your macro.</p>
+					<p id="no-interactions" class="hidden">No interactions recorded yet.</p>
+				</div>
+				<ul id="macro-list" class="hidden">
+				</ul>
+			</div>
+		</main>
+		<script type="module" src="recorder.js"></script>
+	</body>
+</html>

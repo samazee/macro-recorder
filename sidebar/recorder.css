@@ -1,0 +1,24 @@
+@import "tailwindcss";
+.hidden {
+	display: none;
+}
+
+#record {
+	@apply text-red-500;
+}
+
+#list {
+	color: gray;
+}
+
+.macro-item {
+	@apply flex justify-between; 
+}
+
+.step-item {
+	@apply whitespace-nowrap overflow-hidden text-ellipsis; 
+}
+
+.macro-item > button {
+	@apply text-green-500;
+}

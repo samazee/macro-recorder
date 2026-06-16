@@ -1,0 +1,51 @@
+{
+	"description": "",
+	"manifest_version": 3,
+	"name": "MarcoRecorder",
+	"version": "1.0",
+	"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+	"icons": {
+		"48": "icons/beasts-48.png"
+	},
+	"permissions": [
+		"activeTab",
+		"scripting",
+		"tabs",
+		"storage"
+	],
+	"host_permissions": [
+		"<all_urls>"
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "beastify@mozilla.org",
+			"data_collection_permissions": {
+				"required": ["none"]
+			}
+		}
+	},
+	"action": {
+		"default_icon": "icons/beasts-32.png",
+		"theme_icons": [{
+			"light": "icons/beasts-32-light.png",
+			"dark": "icons/beasts-32.png",
+			"size": 32
+		}],
+		"default_title": "MacroRecorder"
+	},
+	"sidebar_action": {
+		"default_icon": "icons/beasts-32.png",
+		"default_title": "MacroRecorder",
+		"default_panel": "sidebar/recorder.html"
+	},
+	"web_accessible_resources": [
+		{
+			"resources": [ "beasts/*.jpg" ],
+			"matches": [ "*://*/*" ]
+		}
+	],
+	"background": {
+		"scripts": ["background.js"],
+		"type": "module"
+	}
+}
