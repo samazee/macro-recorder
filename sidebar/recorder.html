@@ -8,7 +8,7 @@
 	</head>
 
 	<body>
-		<main>
+		<main class="relative min-w-full min-h-full">
 			<nav class="flex gap-2 px-2 py-1">
 				<input type="text" class="w-full" name="macro-title" id="macro-title"/>
 				<ul class="flex gap-1 justify-end">
@@ -27,7 +27,22 @@
 					<p id="no-interactions" class="hidden">No interactions recorded yet.</p>
 				</div>
 				<ul id="macro-list" class="hidden">
+					<p id="no-macros"class="hidden">No macros recorded. Press &#x23FA to start recording your macro.</p>
 				</ul>
+				<dialog id="popup-prompt" class="backdrop:bg-gray-50 backdrop:backdrop-blur px-2 border-rounded">
+					<p class="pb-2">You still have an unsaved macro</p>
+					<div class="flex jutify-end gap-2 pt-2">
+						<button id="popup-discard">Discard</button>
+						<button id="popup-save">Save</button>
+					</div>
+				</dialog>
+				<dialog id="popup-preference" class="backdrop:bg-gray-50 backdrop:backdrop-blur px-2 border-rounded">
+					<p class="pb-2">You still have an unsaved macro</p>
+					<div class="flex jutify-end gap-2 pt-2">
+						<button id="popup-discard">Discard</button>
+						<button id="popup-save">Save</button>
+					</div>
+				</dialog>
 			</div>
 		</main>
 		<script type="module" src="recorder.js"></script>
